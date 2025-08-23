@@ -22,6 +22,37 @@ app.use('/api/radcheck', radcheckRoutes);
 const clientFilePermissionsRoutes = require('./routes/clientfilepermissions.routes');
 app.use('/api/clientfilepermissions', clientFilePermissionsRoutes);
 
+
+//done by muskan
+// ✅ Userpgs (Sequelize)
+const userpgsRoutes = require('./routes/userpgs.routes');
+app.use('/api/userpgs', userpgsRoutes);
+
+// ✅ vouchers (Sequelize)
+const voucherRoutes = require("./routes/vouchers.routes"); 
+app.use("/api/vouchers", voucherRoutes);
+
+// ✅ walletledgers (Sequelize)
+const walletledgersRoutes = require("./routes/walletledgers.routes");
+app.use("/api/walletledgers", walletledgersRoutes);
+
+// ✅ documents (Sequelize)
+const documentsRoutes = require("./routes/documents.routes");
+app.use("/api/documents", documentsRoutes);
+
+
+// ✅ notifytypes (Sequelize)
+const notifytypesRoutes = require("./routes/notifytypes.routes");
+app.use("/api/notifytypes", notifytypesRoutes);
+
+// ✅ operators (Sequelize)
+const operatorsRoutes = require("./routes/operators.routes");
+app.use("/api/operators", operatorsRoutes);
+
+
+
+
+
 // Root route
 app.get('/', (req, res) => {
   res.json({ message: 'Welcome to the API' });
