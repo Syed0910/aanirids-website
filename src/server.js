@@ -27,6 +27,28 @@ app.use('/api/radcheck', radcheckRoutes);
 const clientFilePermissionsRoutes = require('./routes/clientfilepermissions.routes');
 app.use('/api/clientfilepermissions', clientFilePermissionsRoutes);
 
+// ✅ Email Statuses (Sequelize)
+const emailStatusesRoutes = require('./routes/emailstatuses.routes');
+app.use('/api/emailstatuses', emailStatusesRoutes);
+
+// ✅ Email Templates (Sequelize)
+const emailTemplatesRoutes = require('./routes/emailtemplates.routes');
+app.use('/api/emailtemplates', emailTemplatesRoutes);
+
+// ✅ File Permissions (Sequelize)
+const filePermissionsRoutes = require("./routes/filepermissions.routes");
+app.use("/api/filepermissions", filePermissionsRoutes);
+
+// ✅ Inventories (Sequelize)
+const inventoriesRoutes = require("./routes/inventories.routes");
+app.use("/api/inventories", inventoriesRoutes);
+
+// ✅ Invoice Statuses (Sequelize)
+const invoiceStatusesRoutes = require("./routes/invoicestatuses.routes");
+app.use("/api/invoicestatuses", invoiceStatusesRoutes);
+
+
+
 // Root route
 app.get('/', (req, res) => {
   res.json({ message: 'Welcome to the API 🚀' });
