@@ -69,6 +69,9 @@ app.use('/api/slas', slasRoutes);
 const slastatusesRoutes = require('./routes/slastatuses.routes');
 app.use('/api/slastatuses', slastatusesRoutes);
 
+const permissiontemplatesRoutes = require('./routes/permissiontemplates.routes');
+app.use('/api/permissiontemplates', permissiontemplatesRoutes);
+
 app.get('/', (req, res) => {
   res.json({ message: 'Welcome to the API' });
 });
