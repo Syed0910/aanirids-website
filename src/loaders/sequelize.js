@@ -9,26 +9,33 @@ const sequelize = new Sequelize(
   process.env.DB_USER,
   process.env.DB_PASSWORD,
   {
-    host: process.env.DB_HOST,
-    port: process.env.DB_PORT,
+    host: process.env.DB_HOST || 'localhost',
+    port: process.env.DB_PORT || 3306,
     dialect: 'mysql',
-    logging: false,
+    logging: false, // set to console.log if you want SQL queries logged
   }
 );
 
-// Initialize DB
+// ✅ Initialize DB with retries
 const initDB = async ({ retries = 5, delay = 2000 } = {}) => {
-  for (let i = 0; i < retries; i++) {
+  while (retries) {
     try {
       await sequelize.authenticate();
       console.log('✅ Database connected successfully.');
       return true;
     } catch (err) {
-      console.error(`❌ Database connection failed. Retrying in ${delay}ms...`, err.message);
-      await new Promise(res => setTimeout(res, delay));
+      retries -= 1;
+      console.error(
+        `❌ Database connection failed. ${retries} retries left. Retrying in ${delay}ms...`,
+        err.message
+      );
+      if (!retries) {
+        console.error('❌ All retries exhausted. Database connection failed.');
+        return false;
+      }
+      await new Promise((res) => setTimeout(res, delay));
     }
   }
-  return false;
 };
 
 module.exports = { sequelize, initDB };
