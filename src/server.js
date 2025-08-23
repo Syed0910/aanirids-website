@@ -47,6 +47,29 @@ app.use("/api/inventories", inventoriesRoutes);
 const invoiceStatusesRoutes = require("./routes/invoicestatuses.routes");
 app.use("/api/invoicestatuses", invoiceStatusesRoutes);
 
+// ✅ Invoice Types (Sequelize)
+const invoiceTypesRoutes = require("./routes/invoicetypes.routes");
+app.use("/api/invoicetypes", invoiceTypesRoutes);
+
+// ✅ Maps (Sequelize)
+const mapsRoutes = require("./routes/maps.routes");
+app.use("/api/maps", mapsRoutes);
+
+// ✅ SmsStatuses (Sequelize)
+const smsStatusesRoutes = require("./routes/smsstatuses.routes");
+app.use("/api/smsstatuses", smsStatusesRoutes);
+
+// ✅ WhatsAppStatuses (Sequelize)
+const whatsappStatusesRoutes = require("./routes/whatsappstatuses.routes");
+app.use("/api/whatsappstatuses", whatsappStatusesRoutes);
+
+// ✅ ReceiptTypes (Sequelize)
+const receiptTypesRoutes = require("./routes/receipttypes.routes");
+app.use("/api/receipttypes", receiptTypesRoutes);
+
+// ✅ PlanInfos (Sequelize)
+const planInfosRoutes = require("./routes/planinfos.routes");
+app.use("/api/planinfos", planInfosRoutes);
 
 
 // Root route
@@ -59,7 +82,7 @@ const startServer = async () => {
   const dbOk = await initDB({ retries: 5, delay: 2000 });
   if (!dbOk) {
     console.error('❌ Database initialization failed — exiting.');
-    process.exit(1);
+    process.exit(1);smsstatuses.routes.js
   }
 
   app.listen(PORT, () => {
