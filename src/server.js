@@ -79,7 +79,6 @@ app.use("/api/walletledgers", walletledgersRoutes);
 const documentsRoutes = require("./routes/documents.routes");
 app.use("/api/documents", documentsRoutes);
 
-
 // ✅ notifytypes (Sequelize)
 const notifytypesRoutes = require("./routes/notifytypes.routes");
 app.use("/api/notifytypes", notifytypesRoutes);
@@ -88,6 +87,11 @@ app.use("/api/notifytypes", notifytypesRoutes);
 const operatorsRoutes = require("./routes/operators.routes");
 app.use("/api/operators", operatorsRoutes);
 
+
+// ✅ oltpons (Sequelize)
+const oltponsRoutes = require("./routes/oltpons.routes");
+app.use("/api/oltpons", oltponsRoutes);
+=======
 //done by numan
 
 // ✅ Email Statuses (Sequelize)
@@ -167,32 +171,36 @@ app.use('/api/nasarchives', nasarchivesRoutes);
 const operatorlogsRoutes = require('./routes/operatorlogs.routes');
 app.use('/api/operatorlogs', operatorlogsRoutes);
 
-const personalAccessTokensRoutes = require('./routes/personal_access_tokens.routes');
-app.use('/api/personal_access_tokens', personalAccessTokensRoutes);
 
-const plansRoutes = require('./routes/plans.routes');
-app.use('/api/plans', plansRoutes);
+// ✅ olts (Sequelize)
+const oltsRoutes = require("./routes/olts.routes");
+app.use("/api/olts", oltsRoutes);
 
-const radreplyRoutes = require('./routes/radreply.routes');
-app.use('/api/radreply', radreplyRoutes);
+// ✅ onumacs (Sequelize)
+const onumacsRoutes = require("./routes/onumacs.routes");
+app.use("/api/onumacs", onumacsRoutes);
 
-const receiptsRoutes = require('./routes/receipts.routes');
-app.use('/api/receipts', receiptsRoutes);
+// ✅ operatorpgs (Sequelize)
+const operatorpgsRoutes = require("./routes/operatorpgs.routes");
+app.use("/api/operatorpgs", operatorpgsRoutes);
 
-const rechargesRoutes = require('./routes/recharges.routes');
-app.use('/api/recharges', rechargesRoutes);
+// ✅ otps (Sequelize)
+const otpsRoutes = require("./routes/otps.routes");
+app.use("/api/otps", otpsRoutes);
 
-const slasRoutes = require('./routes/slas.routes');
-app.use('/api/slas', slasRoutes);
+// ✅ otts (Sequelize)
+const ottsRoutes = require("./routes/otts.routes");
+app.use("/api/otts", ottsRoutes);
 
-const slastatusesRoutes = require('./routes/slastatuses.routes');
-app.use('/api/slastatuses', slastatusesRoutes);
+
+
 
 const smsstatusesRoutes = require('./routes/smsstatuses.routes');
 app.use('/api/smsstatuses', smsstatusesRoutes);
 
 const permissiontemplatesRoutes = require('./routes/permissiontemplates.routes');
 app.use('/api/permissiontemplates', permissiontemplatesRoutes);
+
 
 const plangroupsRoutes = require('./routes/plangroups.routes');
 app.use('/api/plangroups', plangroupsRoutes);
