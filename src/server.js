@@ -18,6 +18,8 @@ app.use('/api/userInfos', userInfosRoutes);
 const radcheckRoutes = require('./routes/radcheck.routes');
 app.use('/api/radcheck', radcheckRoutes);
 
+// dummy-amaan
+
 // ✅ Client File Permissions (Sequelize)
 const clientFilePermissionsRoutes = require('./routes/clientfilepermissions.routes');
 app.use('/api/clientfilepermissions', clientFilePermissionsRoutes);
@@ -134,6 +136,7 @@ app.use("/api/planinfos", planInfosRoutes);
 
 //done by amaan
 
+
 const radacctRoutes = require('./routes/radacct.routes');
 app.use('/api/radacct', radacctRoutes);
 
@@ -185,12 +188,41 @@ app.use('/api/slas', slasRoutes);
 const slastatusesRoutes = require('./routes/slastatuses.routes');
 app.use('/api/slastatuses', slastatusesRoutes);
 
+const smsstatusesRoutes = require('./routes/smsstatuses.routes');
+app.use('/api/smsstatuses', smsstatusesRoutes);
+
 const permissiontemplatesRoutes = require('./routes/permissiontemplates.routes');
 app.use('/api/permissiontemplates', permissiontemplatesRoutes);
 
+const plangroupsRoutes = require('./routes/plangroups.routes');
+app.use('/api/plangroups', plangroupsRoutes);
 
+const nasconfigsRoutes = require('./routes/nasconfigs.routes');
+app.use('/api/nasconfigs', nasconfigsRoutes);
 
+const naslistsRoutes = require('./routes/naslists.routes');
+app.use('/api/naslists', naslistsRoutes);
+
+const netdiagsRoutes = require('./routes/netdiags.routes');
+app.use('/api/netdiags', netdiagsRoutes);
+
+//dummy-amaan
+const parentchildsRoutes = require('./routes/parentchilds.routes');
+app.use('/api/parentchilds', parentchildsRoutes);
+
+const passwordResetsRoutes = require('./routes/password_resets.routes');
+app.use('/api/password_resets', passwordResetsRoutes);
+
+const phpnasRoutes = require('./routes/phpnas.routes');
+app.use('/api/phpnas', phpnasRoutes);
+
+const phpnastasksRoutes = require('./routes/phpnastasks.routes');
+app.use('/api/phpnastasks', phpnastasksRoutes);
+
+// Root
+=======
 // Root route
+
 app.get('/', (req, res) => {
   res.json({ message: 'Welcome to the API' });
 });
@@ -199,7 +231,7 @@ app.get('/', (req, res) => {
 const startServer = async () => {
   const dbOk = await initDB({ retries: 5, delay: 2000 });
   if (!dbOk) {
-    console.error('❌ Database initialization failed — exiting.');
+    console.error('Database initialization failed — exiting.');
     process.exit(1);
   }
 
@@ -212,3 +244,4 @@ startServer().catch((err) => {
   console.error('Failed to start server:', err);
   process.exit(1);
 });
+
