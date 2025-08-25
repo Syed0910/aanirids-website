@@ -227,6 +227,18 @@ app.use('/api/phpnas', phpnasRoutes);
 const phpnastasksRoutes = require('./routes/phpnastasks.routes');
 app.use('/api/phpnastasks', phpnastasksRoutes);
 
+const backprocessesRoutes = require('./routes/backprocesses.routes');
+app.use('/api/backprocesses', backprocessesRoutes);
+
+const billbooksRoutes = require('./routes/billbooks.routes');
+app.use('/api/billbooks', billbooksRoutes);
+
+const configsRoutes = require('./routes/configs.routes');
+app.use('/api/configs', configsRoutes);
+
+const dashcardsRoutes = require('./routes/dashcards.routes');
+app.use('/api/dashcards', dashcardsRoutes);
+
 // Root
 =======
 // Root route
@@ -252,4 +264,3 @@ startServer().catch((err) => {
   console.error('Failed to start server:', err);
   process.exit(1);
 });
-
