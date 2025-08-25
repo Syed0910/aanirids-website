@@ -40,7 +40,6 @@ app.use("/api/walletledgers", walletledgersRoutes);
 const documentsRoutes = require("./routes/documents.routes");
 app.use("/api/documents", documentsRoutes);
 
-
 // ✅ notifytypes (Sequelize)
 const notifytypesRoutes = require("./routes/notifytypes.routes");
 app.use("/api/notifytypes", notifytypesRoutes);
@@ -48,6 +47,33 @@ app.use("/api/notifytypes", notifytypesRoutes);
 // ✅ operators (Sequelize)
 const operatorsRoutes = require("./routes/operators.routes");
 app.use("/api/operators", operatorsRoutes);
+
+// ✅ oltpons (Sequelize)
+const oltponsRoutes = require("./routes/oltpons.routes");
+app.use("/api/oltpons", oltponsRoutes);
+
+// ✅ olts (Sequelize)
+const oltsRoutes = require("./routes/olts.routes");
+app.use("/api/olts", oltsRoutes);
+
+// ✅ onumacs (Sequelize)
+const onumacsRoutes = require("./routes/onumacs.routes");
+app.use("/api/onumacs", onumacsRoutes);
+
+// ✅ operatorpgs (Sequelize)
+const operatorpgsRoutes = require("./routes/operatorpgs.routes");
+app.use("/api/operatorpgs", operatorpgsRoutes);
+
+// ✅ otps (Sequelize)
+const otpsRoutes = require("./routes/otps.routes");
+app.use("/api/otps", otpsRoutes);
+
+// ✅ otts (Sequelize)
+const ottsRoutes = require("./routes/otts.routes");
+app.use("/api/otts", ottsRoutes);
+
+
+
 
 
 
