@@ -27,6 +27,43 @@ app.use('/api/radcheck', radcheckRoutes);
 const clientFilePermissionsRoutes = require('./routes/clientfilepermissions.routes');
 app.use('/api/clientfilepermissions', clientFilePermissionsRoutes);
 
+// ✅ Websockets Statistics Entries (Sequelize style)
+const websocketsStatisticsEntriesRoutes = require('./routes/websockets_statistics_entries.routes');
+app.use('/api/websockets_statistics_entries', websocketsStatisticsEntriesRoutes);
+
+// ✅ WallGardens
+const wallGardensRoutes = require('./routes/wallgardens.routes');
+app.use('/api/wallgardens', wallGardensRoutes);
+
+// ✅ TR-069 Diagnostics
+const tr069Routes = require('./routes/tr069diags.routes');
+app.use('/api/tr069diags', tr069Routes);
+
+// ✅ Tickets
+const ticketsRoutes = require('./routes/tickets.routes');
+app.use('/api/tickets', ticketsRoutes);
+
+// ✅ Ticket Details
+const ticketDetailsRoutes = require('./routes/ticketdetails.routes');
+app.use('/api/ticketdetails', ticketDetailsRoutes);
+
+// ✅ Static IPs
+const staticipsRoutes = require('./routes/staticips.routes');
+app.use('/api/staticips', staticipsRoutes);
+
+// ✅ RAD USER GROUP
+const radusergroupRoutes = require('./routes/radusergroup.routes');
+app.use('/api/radusergroup', radusergroupRoutes);
+
+// ✅ RAD POST AUTH
+const radpostauthRoutes = require('./routes/radpostauth.routes');
+app.use('/api/radpostauth', radpostauthRoutes);
+
+// ✅ RAD FROUP REPLY
+const radgroupreplyRoutes = require('./routes/radgroupreply.routes');
+app.use('/api/radgroupreply', radgroupreplyRoutes);
+
+
 // Root route
 app.get('/', (req, res) => {
   res.json({ message: 'Welcome to the API 🚀' });
