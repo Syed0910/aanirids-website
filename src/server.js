@@ -63,6 +63,18 @@ app.use('/api/radpostauth', radpostauthRoutes);
 const radgroupreplyRoutes = require('./routes/radgroupreply.routes');
 app.use('/api/radgroupreply', radgroupreplyRoutes);
 
+// ✅ SUBSCRIBER 
+const subscriberRoutes = require('./routes/subscriber.routes');
+app.use('/api/subscribers', subscriberRoutes);
+
+// ✅ RAD GROUP CHECK
+const radgroupcheckRoutes = require('./routes/radgroupcheck.routes');
+app.use('/api/radgroupcheck', radgroupcheckRoutes);
+
+// NAS
+const nasRoutes = require('./routes/nas.routes');
+app.use('/api/nas', nasRoutes);
+
 
 // Root route
 app.get('/', (req, res) => {
