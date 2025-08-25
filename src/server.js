@@ -202,11 +202,26 @@ const permissiontemplatesRoutes = require('./routes/permissiontemplates.routes')
 app.use('/api/permissiontemplates', permissiontemplatesRoutes);
 
 
+//numan-changes
+// ✅ SUBSCRIBER 
+const subscriberRoutes = require('./routes/subscriber.routes');
+app.use('/api/subscribers', subscriberRoutes);
+
+// ✅ RAD GROUP CHECK
+const radgroupcheckRoutes = require('./routes/radgroupcheck.routes');
+app.use('/api/radgroupcheck', radgroupcheckRoutes);
+
+// NAS
+const nasRoutes = require('./routes/nas.routes');
+app.use('/api/nas', nasRoutes);
+
+
 const plangroupsRoutes = require('./routes/plangroups.routes');
 app.use('/api/plangroups', plangroupsRoutes);
 
 const nasconfigsRoutes = require('./routes/nasconfigs.routes');
 app.use('/api/nasconfigs', nasconfigsRoutes);
+
 
 const naslistsRoutes = require('./routes/naslists.routes');
 app.use('/api/naslists', naslistsRoutes);
@@ -240,7 +255,7 @@ const dashcardsRoutes = require('./routes/dashcards.routes');
 app.use('/api/dashcards', dashcardsRoutes);
 
 // Root
-=======
+
 // Root route
 
 app.get('/', (req, res) => {
