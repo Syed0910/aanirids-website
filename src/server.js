@@ -18,6 +18,125 @@ app.use('/api/userInfos', userInfosRoutes);
 const radcheckRoutes = require('./routes/radcheck.routes');
 app.use('/api/radcheck', radcheckRoutes);
 
+// dummy-amaan
+
+// ✅ Client File Permissions (Sequelize)
+const clientFilePermissionsRoutes = require('./routes/clientfilepermissions.routes');
+app.use('/api/clientfilepermissions', clientFilePermissionsRoutes);
+
+//  numan-changes
+// ✅ Websockets Statistics Entries (Sequelize style)
+const websocketsStatisticsEntriesRoutes = require('./routes/websockets_statistics_entries.routes');
+app.use('/api/websockets_statistics_entries', websocketsStatisticsEntriesRoutes);
+
+// ✅ WallGardens
+const wallGardensRoutes = require('./routes/wallgardens.routes');
+app.use('/api/wallgardens', wallGardensRoutes);
+
+// ✅ TR-069 Diagnostics
+const tr069Routes = require('./routes/tr069diags.routes');
+app.use('/api/tr069diags', tr069Routes);
+
+// ✅ Tickets
+const ticketsRoutes = require('./routes/tickets.routes');
+app.use('/api/tickets', ticketsRoutes);
+
+// ✅ Ticket Details
+const ticketDetailsRoutes = require('./routes/ticketdetails.routes');
+app.use('/api/ticketdetails', ticketDetailsRoutes);
+
+// ✅ Static IPs
+const staticipsRoutes = require('./routes/staticips.routes');
+app.use('/api/staticips', staticipsRoutes);
+
+// ✅ RAD USER GROUP
+const radusergroupRoutes = require('./routes/radusergroup.routes');
+app.use('/api/radusergroup', radusergroupRoutes);
+
+// ✅ RAD POST AUTH
+const radpostauthRoutes = require('./routes/radpostauth.routes');
+app.use('/api/radpostauth', radpostauthRoutes);
+
+// ✅ RAD FROUP REPLY
+const radgroupreplyRoutes = require('./routes/radgroupreply.routes');
+app.use('/api/radgroupreply', radgroupreplyRoutes);
+=======
+
+//done by muskan
+// ✅ Userpgs (Sequelize)
+const userpgsRoutes = require('./routes/userpgs.routes');
+app.use('/api/userpgs', userpgsRoutes);
+
+// ✅ vouchers (Sequelize)
+const voucherRoutes = require("./routes/vouchers.routes"); 
+app.use("/api/vouchers", voucherRoutes);
+
+// ✅ walletledgers (Sequelize)
+const walletledgersRoutes = require("./routes/walletledgers.routes");
+app.use("/api/walletledgers", walletledgersRoutes);
+
+// ✅ documents (Sequelize)
+const documentsRoutes = require("./routes/documents.routes");
+app.use("/api/documents", documentsRoutes);
+
+
+// ✅ notifytypes (Sequelize)
+const notifytypesRoutes = require("./routes/notifytypes.routes");
+app.use("/api/notifytypes", notifytypesRoutes);
+
+// ✅ operators (Sequelize)
+const operatorsRoutes = require("./routes/operators.routes");
+app.use("/api/operators", operatorsRoutes);
+
+//done by numan
+
+// ✅ Email Statuses (Sequelize)
+const emailStatusesRoutes = require('./routes/emailstatuses.routes');
+app.use('/api/emailstatuses', emailStatusesRoutes);
+
+// ✅ Email Templates (Sequelize)
+const emailTemplatesRoutes = require('./routes/emailtemplates.routes');
+app.use('/api/emailtemplates', emailTemplatesRoutes);
+
+// ✅ File Permissions (Sequelize)
+const filePermissionsRoutes = require("./routes/filepermissions.routes");
+app.use("/api/filepermissions", filePermissionsRoutes);
+
+// ✅ Inventories (Sequelize)
+const inventoriesRoutes = require("./routes/inventories.routes");
+app.use("/api/inventories", inventoriesRoutes);
+
+// ✅ Invoice Statuses (Sequelize)
+const invoiceStatusesRoutes = require("./routes/invoicestatuses.routes");
+app.use("/api/invoicestatuses", invoiceStatusesRoutes);
+
+// ✅ Invoice Types (Sequelize)
+const invoiceTypesRoutes = require("./routes/invoicetypes.routes");
+app.use("/api/invoicetypes", invoiceTypesRoutes);
+
+// ✅ Maps (Sequelize)
+const mapsRoutes = require("./routes/maps.routes");
+app.use("/api/maps", mapsRoutes);
+
+// ✅ SmsStatuses (Sequelize)
+const smsStatusesRoutes = require("./routes/smsstatuses.routes");
+app.use("/api/smsstatuses", smsStatusesRoutes);
+
+// ✅ WhatsAppStatuses (Sequelize)
+const whatsappStatusesRoutes = require("./routes/whatsappstatuses.routes");
+app.use("/api/whatsappstatuses", whatsappStatusesRoutes);
+
+// ✅ ReceiptTypes (Sequelize)
+const receiptTypesRoutes = require("./routes/receipttypes.routes");
+app.use("/api/receipttypes", receiptTypesRoutes);
+
+// ✅ PlanInfos (Sequelize)
+const planInfosRoutes = require("./routes/planinfos.routes");
+app.use("/api/planinfos", planInfosRoutes);
+
+//done by amaan
+
+
 const radacctRoutes = require('./routes/radacct.routes');
 app.use('/api/radacct', radacctRoutes);
 
@@ -87,6 +206,7 @@ app.use('/api/naslists', naslistsRoutes);
 const netdiagsRoutes = require('./routes/netdiags.routes');
 app.use('/api/netdiags', netdiagsRoutes);
 
+//dummy-amaan
 const parentchildsRoutes = require('./routes/parentchilds.routes');
 app.use('/api/parentchilds', parentchildsRoutes);
 
@@ -112,6 +232,9 @@ const dashcardsRoutes = require('./routes/dashcards.routes');
 app.use('/api/dashcards', dashcardsRoutes);
 
 // Root
+=======
+// Root route
+
 app.get('/', (req, res) => {
   res.json({ message: 'Welcome to the API' });
 });
